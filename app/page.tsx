@@ -9,10 +9,10 @@ const Star = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--g
 
 const svcs = [
   {title:'Airport & Ferry Transfer',sub:'Send your flight details for Victoria Airport (YYJ). Zero-stress pickups.',img:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80',href:'/services'},
-  {title:'Victoria City Tours',sub:'Specialist in Express, Highlights, Grand, Garden & Full Day tours.',img:'https://images.unsplash.com/photo-1775740738694-1d590125a704?q=80',href:'/tours'},
+  {title:'Victoria City Tours',sub:'Specialist in 1 hour Express tour, City Highlights, Grand, Garden & Full day tours.',img:'https://images.unsplash.com/photo-1775740738694-1d590125a704?q=80',href:'/tours'},
   {title:'Outstation Trips',sub:'Vancouver, Whistler, Nanaimo, Tofino, Port Hardy & more.',img:'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',href:'/services'},
-  {title:'Wine Tours',sub:'Explore the finest wineries on Vancouver Island.',img:'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80',href:'/services'},
-  {title:'Malahat Skywalk',sub:'Breathtaking treetop walk & spiral tower experience.',img:'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',href:'/services'},
+  {title:'Cowichan Valley Wine / Cider / Distillery & Craft Spirits Tour',sub:'4–6 hours. Explore the finest of Cowichan Valley.',img:'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80',href:'/services'},
+  {title:'Malahat Skywalk & Castle Tour',sub:'4–5 hours. Treetop walk, spiral tower & castle visit.',img:'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',href:'/services'},
   {title:'Wheelchair Accessible',sub:'Ramp, tie-downs, trained driver. Everyone welcome.',img:'https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=800&q=80',href:'/fleet'},
 ]
 
@@ -179,7 +179,7 @@ export default function Home() {
             <h2 className="font-display" style={{fontSize:'clamp(1.8rem,4vw,3.5rem)',lineHeight:0.95,marginBottom:18}}>CITY<br />TOURS</h2>
             <p style={{fontSize:'clamp(13px,1.8vw,15px)',color:'rgba(255,255,255,0.4)',lineHeight:1.9,marginBottom:18}}>Specialist in personalized Victoria city tours. Preview each stop day and night before you book.</p>
             <div style={{display:'flex',flexDirection:'column',gap:8,marginBottom:24}}>
-              {["1 Hour Express Tour","2 Hour City Highlights","3 Hour Grand City Tour","4 Hour City Garden Tour","Full Day Tour"].map(t=>(
+              {["1 hour Express tour","Victoria City Highlights 2 hours","Grand City Tour 3 hours","Victoria Garden Tour 4 hours","Full day Tour"].map(t=>(
                 <div key={t} style={{display:'flex',gap:10,alignItems:'flex-start',fontSize:'clamp(12px,1.5vw,13px)',color:'rgba(255,255,255,0.38)'}}><Tick />{t}</div>
               ))}
             </div>

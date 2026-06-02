@@ -100,7 +100,7 @@ export default function ContactPage() {
               <div style={{marginBottom:12}}>
                 <label style={{display:'block',fontSize:9,color:'#555',letterSpacing:'0.06em',textTransform:'uppercase',marginBottom:5}}>Service needed</label>
                 <select style={fStyle}>
-                  {['Airport / Ferry Transfer','City Tour','Outstation Trip','Wine Tour','Malahat Skywalk','Designated Driver','U-Haul Driver','Limousine / Special Event','Other'].map(o=><option key={o}>{o}</option>)}
+                  {['Airport / Ferry Transfer','City Tour','Outstation Trip','Cowichan Valley Wine / Cider / Spirits Tour','Malahat Skywalk & Castle Tour','Designated Driver','U-Haul Driver','Limousine / Special Event','Other'].map(o=><option key={o}>{o}</option>)}
                 </select>
               </div>
 
