@@ -13,10 +13,10 @@ export default function ContactPage() {
   }
 
   const methods = [
-    {icon:'💬',label:'WhatsApp',val:'+1 (250) 986-8284',note:'Fastest response',href:'https://wa.me/12509868284',col:'#25D366',ext:true},
-    {icon:'✉️',label:'Text',val:'+1 (250) 986-8284',note:'Include location, date & time',href:'sms:+12509868284',col:'#aaa',ext:false},
-    {icon:'📞',label:'Call',val:'+1 (250) 986-8284',note:'Text or email preferred',href:'tel:+12509868284',col:'var(--gold)',ext:false},
+    {icon:'💬',label:'Text',val:'+1 (250) 986-8284',note:'Quick & easy',href:'sms:+12509868284',col:'#aaa',ext:false},
     {icon:'📧',label:'Email',val:'1cab.victoria@gmail.com',note:'For longer enquiries',href:'mailto:1cab.victoria@gmail.com',col:'#ff9999',ext:false},
+    {icon:'💬',label:'WhatsApp',val:'+1 (250) 986-8284',note:'Also fast',href:'https://wa.me/12509868284',col:'#25D366',ext:true},
+    {icon:'📞',label:'Call',val:'+1 (250) 986-8284',note:'Text or email preferred',href:'tel:+12509868284',col:'var(--gold)',ext:false},
   ]
 
   return (
@@ -68,11 +68,15 @@ export default function ContactPage() {
               </a>
             ))}
 
-            {/* Google review */}
+            {/* Review section */}
             <div style={{marginTop:20,background:'rgba(66,133,244,0.05)',border:'1px solid rgba(66,133,244,0.18)',padding:'18px',borderRadius:2}}>
-              <p style={{fontSize:10,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'#4285F4',marginBottom:7}}>⭐ Google Review</p>
-              <p style={{fontSize:'clamp(11px,1.5vw,12px)',color:'rgba(255,255,255,0.3)',lineHeight:1.7,marginBottom:14}}>Had a great experience? Help other travellers find 1Cab Victoria.</p>
-              <a href="https://www.google.com/maps/search/1cab+victoria" target="_blank" rel="noreferrer" className="btn-secondary" style={{fontSize:11,padding:'9px 18px'}}>Open Google Maps ↗</a>
+              <p style={{fontSize:10,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'#4285F4',marginBottom:7}}>⭐ Leave a Review</p>
+              <p style={{fontSize:'clamp(11px,1.5vw,12px)',color:'rgba(255,255,255,0.3)',lineHeight:1.7,marginBottom:14}}>Had a great experience? Help other travellers find BookaCab Victoria.</p>
+              <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+                <a href="https://g.page/r/CU7QJF11gO34EBI/review" target="_blank" rel="noreferrer" className="btn-secondary" style={{fontSize:11,padding:'9px 18px'}}>⭐ Google ↗</a>
+                <a href="https://www.tripadvisor.com" target="_blank" rel="noreferrer" className="btn-secondary" style={{fontSize:11,padding:'9px 18px'}}>Trip Advisor ↗</a>
+                <a href="https://www.viator.com" target="_blank" rel="noreferrer" className="btn-secondary" style={{fontSize:11,padding:'9px 18px'}}>Viator ↗</a>
+              </div>
             </div>
           </div>
 
@@ -96,7 +100,7 @@ export default function ContactPage() {
               <div style={{marginBottom:12}}>
                 <label style={{display:'block',fontSize:9,color:'#555',letterSpacing:'0.06em',textTransform:'uppercase',marginBottom:5}}>Service needed</label>
                 <select style={fStyle}>
-                  {['Airport / Ferry Transfer','City Tour','Outstation Trip','Designated Driver','U-Haul Driver','Limousine / Special Event','Other'].map(o=><option key={o}>{o}</option>)}
+                  {['Airport / Ferry Transfer','City Tour','Outstation Trip','Wine Tour','Malahat Skywalk','Designated Driver','U-Haul Driver','Limousine / Special Event','Other'].map(o=><option key={o}>{o}</option>)}
                 </select>
               </div>
 
@@ -114,8 +118,9 @@ export default function ContactPage() {
                   <p style={{fontSize:11,fontWeight:700,color:'var(--gold)',marginBottom:5}}>⚡ Same-day booking!</p>
                   <p style={{fontSize:'clamp(11px,1.5vw,12px)',color:'rgba(255,255,255,0.38)',lineHeight:1.6,marginBottom:9}}>For today's rides, contact Jay directly for fastest response:</p>
                   <div style={{display:'flex',gap:7,flexWrap:'wrap'}}>
-                    <a href="https://wa.me/12509868284" style={{fontSize:10,fontWeight:700,padding:'6px 12px',background:'#25D366',color:'#fff',textDecoration:'none',borderRadius:2,letterSpacing:'0.05em',textTransform:'uppercase'}}>WhatsApp</a>
                     <a href="sms:+12509868284" style={{fontSize:10,fontWeight:700,padding:'6px 12px',background:'#1a1a1a',color:'#ccc',border:'1px solid #333',textDecoration:'none',borderRadius:2,letterSpacing:'0.05em',textTransform:'uppercase'}}>Text</a>
+                    <a href="mailto:1cab.victoria@gmail.com" style={{fontSize:10,fontWeight:700,padding:'6px 12px',background:'#1a1a1a',color:'#ccc',border:'1px solid #333',textDecoration:'none',borderRadius:2,letterSpacing:'0.05em',textTransform:'uppercase'}}>Email</a>
+                    <a href="https://wa.me/12509868284" style={{fontSize:10,fontWeight:700,padding:'6px 12px',background:'#25D366',color:'#fff',textDecoration:'none',borderRadius:2,letterSpacing:'0.05em',textTransform:'uppercase'}}>WhatsApp</a>
                     <a href="tel:+12509868284" style={{fontSize:10,fontWeight:700,padding:'6px 12px',background:'var(--gold)',color:'#000',textDecoration:'none',borderRadius:2,letterSpacing:'0.05em',textTransform:'uppercase'}}>📞 Call</a>
                   </div>
                 </div>
@@ -123,7 +128,7 @@ export default function ContactPage() {
 
               <div style={{marginBottom:18}}>
                 <label style={{display:'block',fontSize:9,color:'#555',letterSpacing:'0.06em',textTransform:'uppercase',marginBottom:5}}>Message (optional)</label>
-                <textarea placeholder="Pickup location, number of passengers, any special requirements..." rows={3}
+                <textarea placeholder="Pickup location, number of passengers and bags, any special requirements..." rows={3}
                   style={{...fStyle,resize:'vertical'}}
                   onFocus={e=>(e.currentTarget.style.borderColor='rgba(245,166,35,0.5)')}
                   onBlur={e=>(e.currentTarget.style.borderColor='#2a2a2a')}

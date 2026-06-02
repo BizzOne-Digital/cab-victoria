@@ -8,11 +8,11 @@ const Tick = () => <svg width="13" height="13" viewBox="0 0 24 24" fill="none" s
 const Star = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
 
 const svcs = [
-  {title:'Airport & Ferry Transfer',sub:'Zero-stress pickups. Flight tracking. All hours.',img:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80',href:'/services'},
-  {title:'Victoria City Tours',sub:'Day & night. 8 iconic stops. Fully customisable.',img:'https://images.unsplash.com/photo-1775740738694-1d590125a704?q=80',href:'/tours'},
-  {title:'Outstation Trips',sub:'Long-distance rides across BC. Comfortable & on time.',img:'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',href:'/services'},
-  {title:'Stretch Limousine',sub:'Weddings, proms, anniversaries. Arrive like royalty.',img:'https://images.unsplash.com/photo-1519999482648-25049ddd37b1?w=800&q=80',href:'/fleet'},
-  {title:'Designated Driver',sub:"We drive your car home. Enjoy your night safely.",img:'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80',href:'/services'},
+  {title:'Airport & Ferry Transfer',sub:'Send your flight details for Victoria Airport (YYJ). Zero-stress pickups.',img:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80',href:'/services'},
+  {title:'Victoria City Tours',sub:'Specialist in Express, Highlights, Grand, Garden & Full Day tours.',img:'https://images.unsplash.com/photo-1775740738694-1d590125a704?q=80',href:'/tours'},
+  {title:'Outstation Trips',sub:'Vancouver, Whistler, Nanaimo, Tofino, Port Hardy & more.',img:'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',href:'/services'},
+  {title:'Wine Tours',sub:'Explore the finest wineries on Vancouver Island.',img:'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80',href:'/services'},
+  {title:'Malahat Skywalk',sub:'Breathtaking treetop walk & spiral tower experience.',img:'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',href:'/services'},
   {title:'Wheelchair Accessible',sub:'Ramp, tie-downs, trained driver. Everyone welcome.',img:'https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=800&q=80',href:'/fleet'},
 ]
 
@@ -89,12 +89,13 @@ export default function Home() {
           </h1>
 
           <p style={{fontSize:'clamp(13px,2vw,16px)',color:'rgba(255,255,255,0.5)',lineHeight:1.8,maxWidth:480,marginBottom:28}}>
-            Premium transportation across Victoria — airport transfers, city tours, outstation trips, and luxury vehicles. 1 to 20 passengers.
+            Personalized transportation across Victoria — airport transfers, city tours, outstation trips, and luxury vehicles. 1 to 20 passengers.
           </p>
 
           <div className="h-btns" style={{marginBottom:32}}>
-            <a href="https://wa.me/12509868284" className="btn-primary"><WA /> Book via WhatsApp</a>
-            <Link href="/tours" className="btn-secondary">Explore City Tours <Chev /></Link>
+            <a href="sms:+12509868284" className="btn-primary">💬 Text Us</a>
+            <a href="mailto:1cab.victoria@gmail.com" className="btn-secondary">✉ Email</a>
+            <a href="https://wa.me/12509868284" className="btn-secondary"><WA /> WhatsApp</a>
           </div>
 
           <div className="h-stats">
@@ -168,17 +169,17 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ── TOURS ── */}
+    {/* ── CITY TOURS ── */}
     <section style={{background:'#080808',padding:'clamp(48px,7vw,80px) 0',borderTop:'1px solid #1a1a1a'}}>
       <div className="wrap">
         <div className="tours-grid">
           <div>
             <div className="gold-bar" />
-            <p style={{fontSize:10,fontWeight:700,letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--gold)',marginBottom:6}}>Interactive</p>
-            <h2 className="font-display" style={{fontSize:'clamp(1.8rem,4vw,3.5rem)',lineHeight:0.95,marginBottom:18}}>DISCOVER<br />VICTORIA</h2>
-            <p style={{fontSize:'clamp(13px,1.8vw,15px)',color:'rgba(255,255,255,0.4)',lineHeight:1.9,marginBottom:18}}>Explore 8 iconic stops — from Butchart Gardens to the glowing Parliament at night. Preview each stop day and night before you book.</p>
+            <p style={{fontSize:10,fontWeight:700,letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--gold)',marginBottom:6}}>Explore Our Services</p>
+            <h2 className="font-display" style={{fontSize:'clamp(1.8rem,4vw,3.5rem)',lineHeight:0.95,marginBottom:18}}>CITY<br />TOURS</h2>
+            <p style={{fontSize:'clamp(13px,1.8vw,15px)',color:'rgba(255,255,255,0.4)',lineHeight:1.9,marginBottom:18}}>Specialist in personalized Victoria city tours. Preview each stop day and night before you book.</p>
             <div style={{display:'flex',flexDirection:'column',gap:8,marginBottom:24}}>
-              {["Butchart Gardens · Inner Harbour · Craigdarroch Castle","BC Legislature night glow · Fisherman's Wharf","Beacon Hill Park · Fan Tan Alley · Dallas Road"].map(t=>(
+              {["1 Hour Express Tour","2 Hour City Highlights","3 Hour Grand City Tour","4 Hour City Garden Tour","Full Day Tour"].map(t=>(
                 <div key={t} style={{display:'flex',gap:10,alignItems:'flex-start',fontSize:'clamp(12px,1.5vw,13px)',color:'rgba(255,255,255,0.38)'}}><Tick />{t}</div>
               ))}
             </div>
@@ -271,7 +272,12 @@ export default function Home() {
             <div style={{width:36,height:1,background:'var(--gold)',margin:'0 auto 14px'}} />
             <div style={{fontSize:10,color:'rgba(255,255,255,0.25)',letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:18}}>Jaydeep Mohan · Personal Driver</div>
             <div style={{display:'flex',gap:3,justifyContent:'center',marginBottom:22}}>{[1,2,3,4,5].map(i=><Star key={i} />)}</div>
-            <a href="https://www.google.com/maps/search/1cab+victoria" target="_blank" rel="noreferrer" className="btn-secondary" style={{fontSize:11,padding:'10px 18px'}}>⭐ Leave a Review</a>
+            <p style={{fontSize:10,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(255,255,255,0.25)',marginBottom:12}}>Leave a Review</p>
+            <div style={{display:'flex',gap:8,justifyContent:'center',flexWrap:'wrap'}}>
+              <a href="https://g.page/r/CU7QJF11gO34EBI/review" target="_blank" rel="noreferrer" className="btn-secondary" style={{fontSize:10,padding:'8px 14px'}}>⭐ Google</a>
+              <a href="https://www.tripadvisor.com" target="_blank" rel="noreferrer" className="btn-secondary" style={{fontSize:10,padding:'8px 14px'}}>Trip Advisor</a>
+              <a href="https://www.viator.com" target="_blank" rel="noreferrer" className="btn-secondary" style={{fontSize:10,padding:'8px 14px'}}>Viator</a>
+            </div>
           </div>
         </div>
       </div>
@@ -280,10 +286,11 @@ export default function Home() {
     {/* ── CTA ── */}
     <section style={{background:'#080808',padding:'clamp(48px,7vw,80px) 24px',borderTop:'1px solid #1a1a1a',textAlign:'center'}}>
       <h2 className="font-display" style={{fontSize:'clamp(2.2rem,8vw,5rem)',lineHeight:0.9,marginBottom:12}}>READY TO<br /><span style={{color:'var(--gold)'}}>RIDE?</span></h2>
-      <p style={{fontSize:'clamp(12px,1.8vw,14px)',color:'rgba(255,255,255,0.3)',lineHeight:1.8,maxWidth:380,margin:'0 auto 28px'}}>Text 2–3 hrs ahead with pickup location, date/time & destination for guaranteed on-time service.</p>
+      <p style={{fontSize:'clamp(12px,1.8vw,14px)',color:'rgba(255,255,255,0.3)',lineHeight:1.8,maxWidth:380,margin:'0 auto 28px'}}>Text 2–3 hrs ahead with pickup location, date/time, number of passengers and bags & destination for guaranteed on-time service.</p>
       <div style={{display:'flex',gap:10,justifyContent:'center',flexWrap:'wrap'}}>
-        <a href="https://wa.me/12509868284" className="btn-primary"><WA />WhatsApp</a>
-        <a href="sms:+12509868284" className="btn-secondary">Text</a>
+        <a href="sms:+12509868284" className="btn-primary">💬 Text</a>
+        <a href="mailto:1cab.victoria@gmail.com" className="btn-secondary">✉ Email</a>
+        <a href="https://wa.me/12509868284" className="btn-secondary"><WA />WhatsApp</a>
         <a href="tel:+12509868284" className="btn-secondary">📞 Call</a>
         <Link href="/contact" className="btn-secondary">Contact</Link>
       </div>
