@@ -3,12 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const fleet = [
-  {name:'Wheelchair Accessible Van',cap:'Up to 6 + wheelchair',img:'https://images.unsplash.com/photo-1633466154054-399bf16156a2?q=80',note:'Motorised ramp, secured tie-downs, extra headroom. No mobility need is too much.',tags:['Ramp access','Tie-downs','Inclusive'],ideal:'All mobility needs · Medical · Airport',popular:true},
-  {name:'20-Passenger Bus',cap:'Up to 20',img:'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=900&q=80',note:'The largest vehicle. Perfect for corporate events, sports teams, large tour groups.',tags:['20 seats','Events','Large tours'],ideal:'Corporate · Sports · Big weddings',popular:true},
-  {name:'Stretch Limousine',cap:'Up to 10',img:'https://images.unsplash.com/photo-1519999482648-25049ddd37b1?w=900&q=80',note:'Premium interior, drinks console, privacy screen. For extraordinary moments.',tags:['Luxury','Weddings','Events'],ideal:'Weddings · Proms · Celebrations',popular:true},
-  {name:'Electric Cars',cap:'1–4 passengers',img:'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&q=80',note:'Zero emissions, silent, ultra-modern. Perfect for eco-conscious travellers.',tags:['Zero emissions','Silent','Modern'],ideal:'Solo/couple · Airport · City',popular:false},
-  {name:'Passenger Vans',cap:'Up to 7',img:'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=900&q=80',note:'Spacious and comfortable for families. Ample luggage space.',tags:['Family','Luggage','Groups'],ideal:'Families · Small groups · Airport',popular:false},
-  {name:'High Roof Transit Van',cap:'Up to 12',img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80',note:'Maximum headroom and luggage capacity. Best for airport groups with lots of bags.',tags:['High headroom','12 seats','Luggage'],ideal:'Airport groups · Equipment',popular:false},
+  {name:'Wheelchair Accessible Van',cap:'Up to 4 + wheelchair',img:'/services/wheelchair-van.jpg',note:'Motorised ramp, secured tie-downs, extra headroom. No mobility need is too much.',tags:['Ramp access','Tie-downs','Inclusive'],ideal:'All mobility needs · Medical · Airport',popular:true},
+  {name:'20-Passenger Bus',cap:'Up to 20',img:'/vehicles/bus-20pax.jpg',note:'The largest vehicle. Perfect for corporate events, sports teams, large tour groups.',tags:['20 seats','Events','Large tours'],ideal:'Corporate · Sports · Big weddings',popular:true},
+  {name:'Stretch Limousine',cap:'Up to 8',img:'/vehicles/limo-8pax.webp',note:'Premium interior, drinks console, privacy screen. For extraordinary moments.',tags:['Luxury','Weddings','Events'],ideal:'Weddings · Proms · Celebrations',popular:true},
+  {name:'Electric Cars',cap:'1–3 passengers',img:'/vehicles/electric-car.jpg',note:'Zero emissions, silent, ultra-modern. Perfect for eco-conscious travellers.',tags:['Zero emissions','Silent','Modern'],ideal:'Solo/couple · Airport · City',popular:false},
+  {name:'Red Passenger Van',cap:'Up to 6',img:'/vehicles/red-van-6pax.jpg',note:'Spacious and comfortable for families. Ample luggage space for 8 bags.',tags:['Family','Luggage','Groups'],ideal:'Families · Small groups · Airport',popular:false},
+  {name:'High Roof Transit Van',cap:'Up to 14',img:'/vehicles/transit-van.jpg',note:'Maximum headroom and luggage capacity. Best for airport groups with lots of bags.',tags:['High headroom','14 seats','Luggage'],ideal:'Airport groups · Equipment',popular:false},
   {name:'Town Car',cap:'1–4 passengers',img:'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=80',note:'Executive sedan with premium interior. The choice for business and VIP travel.',tags:['Executive','VIP','Business'],ideal:'Business travel · VIP transfers',popular:false},
 ]
 
@@ -134,6 +134,8 @@ export default function FleetPage() {
       <p style={{color:'rgba(255,255,255,0.3)',marginBottom:24,fontSize:'clamp(12px,1.8vw,13px)'}}>Tell Jay your group size and destination — he'll recommend the right vehicle instantly.</p>
       <div style={{display:'flex',gap:10,justifyContent:'center',flexWrap:'wrap'}}>
         <a href="https://wa.me/12509868284?text=Hi Jay, I need help choosing the right vehicle." className="btn-primary">Ask Jay on WhatsApp</a>
+        <a href="sms:+12509868284" className="btn-secondary">💬 Text</a>
+        <a href="mailto:1cab.victoria@gmail.com" className="btn-secondary">✉ Email</a>
         <a href="tel:+12509868284" className="btn-secondary">📞 Call</a>
       </div>
     </section>
