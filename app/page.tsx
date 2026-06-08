@@ -10,9 +10,9 @@ const Star = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--g
 const svcs = [
   {title:'Airport & Ferry Transfer',sub:'Send your flight details for Victoria Airport (YYJ). We track your flight.',img:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80',href:'/services'},
   {title:'Victoria City Tours',sub:'1 hour, 2 hours, 3 hours, 4 hours or Full day. You pick the time.',img:'/tours/inner-harbour-day.webp',href:'/tours'},
-  {title:'Outstation Trips',sub:'Vancouver, Whistler, Nanaimo, Tofino, Port Hardy & more.',img:'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',href:'/services'},
-  {title:'Cowichan Valley Wine / Cider / Distillery & Craft Spirits Tour',sub:'4–6 hours. Taste the best of Cowichan Valley.',img:'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80',href:'/services'},
-  {title:'Malahat Skywalk & Castle Tour',sub:'4–5 hours. Walk above treetops & visit a castle.',img:'/services/malahat-tour.jpg',href:'/services'},
+  {title:'Outstation Trips',sub:'Vancouver, Whistler, Nanaimo, Tofino, Port Hardy & more.',img:'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',href:'/services#outstation-trips'},
+  {title:'Cowichan Valley Wine / Cider / Distillery & Craft Spirits Tour',sub:'4–6 hours. Taste the best of Cowichan Valley.',img:'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80',href:'/services#cowichan-valley'},
+  {title:'Malahat Skywalk & Castle Tour',sub:'4–5 hours. Walk above treetops & visit a castle.',img:'/services/malahat-tour.jpg',href:'/services#malahat-skywalk'},
 ]
 
 const fleetItems = [
@@ -131,9 +131,9 @@ export default function Home() {
           </div>
           <div className="wc-body">
             <h2 className="font-display" style={{fontSize:'clamp(1.6rem,3.5vw,2.8rem)',lineHeight:0.95,marginBottom:10,color:'#e8e8e8'}}>WHEELCHAIR<br /><span style={{color:'var(--gold)'}}>ACCESSIBLE</span></h2>
-            <p style={{fontSize:'clamp(13px,1.8vw,15px)',color:'rgba(255,255,255,0.45)',lineHeight:1.8,marginBottom:16}}>Our van has a ramp, tie-downs for all wheelchair types, and Jay is trained to help. Available for every service — airport, tours, trips. No extra charge.</p>
+            <p style={{fontSize:'clamp(13px,1.8vw,15px)',color:'rgba(255,255,255,0.45)',lineHeight:1.8,marginBottom:16}}>Our van has a ramp, tie-downs for all wheelchair types, and Jay is trained to help. Available for every service — airport, tours, trips.</p>
             <div style={{display:'flex',flexDirection:'column',gap:7,marginBottom:20}}>
-              {['Power ramp — easy roll-on, roll-off','Secure tie-downs for any wheelchair','Trained and caring driver','Airport, tours, trips — all services','Same price — no extra cost'].map(p=>(
+              {['Rear ramp access — easy roll-on, roll-off','Secure tie-downs for any wheelchair','Trained and caring driver','Airport, tours, trips — all services'].map(p=>(
                 <div key={p} style={{display:'flex',gap:9,alignItems:'flex-start',fontSize:'clamp(12px,1.5vw,13px)',color:'rgba(255,255,255,0.38)'}}><Tick />{p}</div>
               ))}
             </div>

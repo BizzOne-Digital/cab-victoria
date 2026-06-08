@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer'
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, phone, service, date, message } = body
+    const { name, phone, email, service, date, message } = body
 
     if (!name || !phone || !service) {
       return NextResponse.json({ error: 'Name, phone and service are required.' }, { status: 400 })
@@ -27,6 +27,7 @@ export async function POST(req: NextRequest) {
           <table style="width:100%;border-collapse:collapse;">
             <tr><td style="padding:10px 8px;border-bottom:1px solid #eee;font-weight:bold;color:#333;width:140px;">Name</td><td style="padding:10px 8px;border-bottom:1px solid #eee;color:#555;">${name}</td></tr>
             <tr><td style="padding:10px 8px;border-bottom:1px solid #eee;font-weight:bold;color:#333;">Phone</td><td style="padding:10px 8px;border-bottom:1px solid #eee;color:#555;">${phone}</td></tr>
+            <tr><td style="padding:10px 8px;border-bottom:1px solid #eee;font-weight:bold;color:#333;">Email</td><td style="padding:10px 8px;border-bottom:1px solid #eee;color:#555;">${email || 'Not provided'}</td></tr>
             <tr><td style="padding:10px 8px;border-bottom:1px solid #eee;font-weight:bold;color:#333;">Service</td><td style="padding:10px 8px;border-bottom:1px solid #eee;color:#555;">${service}</td></tr>
             <tr><td style="padding:10px 8px;border-bottom:1px solid #eee;font-weight:bold;color:#333;">Date</td><td style="padding:10px 8px;border-bottom:1px solid #eee;color:#555;">${date || 'Not specified'}</td></tr>
             <tr><td style="padding:10px 8px;font-weight:bold;color:#333;vertical-align:top;">Message</td><td style="padding:10px 8px;color:#555;">${message || 'No message'}</td></tr>

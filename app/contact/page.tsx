@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name:'', phone:'', service:'Airport / Ferry Transfer', date:'', message:'' })
+  const [form, setForm] = useState({ name:'', phone:'', email:'', service:'Airport / Ferry Transfer', date:'', message:'' })
   const [status, setStatus] = useState<'idle'|'sending'|'sent'|'error'>('idle')
   const [errMsg, setErrMsg] = useState('')
   const today = new Date().toISOString().split('T')[0]
@@ -26,7 +26,7 @@ export default function ContactPage() {
       })
       if (res.ok) {
         setStatus('sent')
-        setForm({ name:'', phone:'', service:'Airport / Ferry Transfer', date:'', message:'' })
+        setForm({ name:'', phone:'', email:'', service:'Airport / Ferry Transfer', date:'', message:'' })
       } else {
         const data = await res.json()
         setErrMsg(data.error || 'Something went wrong. Please text or call Jay directly.')
@@ -108,7 +108,7 @@ export default function ContactPage() {
           </div>
 
           {/* Booking form */}
-          <div>
+          <div id="booking-form" style={{scrollMarginTop:80}}>
             <p style={{fontSize:10,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--gold)',marginBottom:14}}>Send a booking enquiry</p>
             <div style={{background:'#0f0f0f',border:'1px solid #1a1a1a',padding:'clamp(18px,3vw,28px)',borderRadius:2}}>
 
@@ -142,6 +142,14 @@ export default function ContactPage() {
                     onBlur={e=>(e.currentTarget.style.borderColor='#2a2a2a')}
                   />
                 </div>
+              </div>
+
+              <div style={{marginBottom:12}}>
+                <label style={{display:'block',fontSize:9,color:'#555',letterSpacing:'0.06em',textTransform:'uppercase',marginBottom:5}}>Email address (optional)</label>
+                <input type="email" placeholder="your@email.com" value={form.email} onChange={e=>set('email',e.target.value)} style={fStyle}
+                  onFocus={e=>(e.currentTarget.style.borderColor='rgba(245,166,35,0.5)')}
+                  onBlur={e=>(e.currentTarget.style.borderColor='#2a2a2a')}
+                />
               </div>
 
               <div style={{marginBottom:12}}>
