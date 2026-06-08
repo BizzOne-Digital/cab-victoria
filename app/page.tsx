@@ -317,7 +317,7 @@ export default function Home() {
         <a href="mailto:1cab.victoria@gmail.com" className="btn-secondary">✉ Email</a>
         <a href="https://wa.me/12509868284" className="btn-secondary"><WA />WhatsApp</a>
         <a href="tel:+12509868284" className="btn-secondary">📞 Call</a>
-        <Link href="/contact" className="btn-secondary">Contact</Link>
+        <Link href="/contact#booking-form" className="btn-secondary">Send Enquiry</Link>
       </div>
     </section>
     </>

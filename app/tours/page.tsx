@@ -23,7 +23,7 @@ const allStops: Record<string,{day:string;night:string}> = {
   'Mt. Tolmie':              {day:'/tours/mt-tolmie-day.jpeg',         night:'/tours/mt-tolmie-night.jpeg'},
   'Gorge Waterway':          {day:'/tours/gorge-waterway-day.jpeg',    night:'/tours/gorge-waterway-day.jpeg'},
   'Japanese Garden':         {day:'/tours/japanese-garden-day.jpg',   night:'/tours/japanese-garden-day.jpg'},
-  'Butchart Gardens':        {day:'/tours/butchart-day.jpg',          night:'/tours/butchart-night.webp'},
+  'Butchart Gardens':        {day:'/tours/butt.jpg',          night:'/tours/butchart-night.webp'},
 }
 
 /* ── TOUR PACKAGES ── */
